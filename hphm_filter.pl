@@ -17,3 +17,6 @@ foreach my $matched (@matcheds) {
     say $matched if $debug;
     system "echo $matched | xclip -sel clip";
 }
+
+# show notify msg
+system "notify-send", "成功获取号牌号码: ", "@matcheds";
